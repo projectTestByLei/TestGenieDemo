@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *destinationLabel;
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageV;
+
+
 
 @end
 

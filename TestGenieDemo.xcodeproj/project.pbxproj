@@ -14,6 +14,9 @@
 		5C7F836B1B02E7330087849F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F836A1B02E7330087849F /* Images.xcassets */; };
 		5C7F836E1B02E7330087849F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F836C1B02E7330087849F /* LaunchScreen.xib */; };
 		5C7F837A1B02E7330087849F /* TestGenieDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F83791B02E7330087849F /* TestGenieDemoTests.m */; };
+		5C7F83851B02E8BF0087849F /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F83841B02E8BF0087849F /* UIView+Genie.m */; };
+		5CF03F441B0994420069A74C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF03F421B0994420069A74C /* Fabric.framework */; };
+		5CF03F451B0994420069A74C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF03F431B0994420069A74C /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		5C7F83731B02E7330087849F /* TestGenieDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGenieDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7F83781B02E7330087849F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7F83791B02E7330087849F /* TestGenieDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGenieDemoTests.m; sourceTree = "<group>"; };
+		5C7F83831B02E8BF0087849F /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
+		5C7F83841B02E8BF0087849F /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
+		5C7F83981B036A4D0087849F /* aaaaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aaaaViewController.h; sourceTree = "<group>"; };
+		5C7F83991B036A4D0087849F /* aaaaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aaaaViewController.m; sourceTree = "<group>"; };
+		5CF03F421B0994420069A74C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5CF03F431B0994420069A74C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF03F451B0994420069A74C /* Crashlytics.framework in Frameworks */,
+				5CF03F441B0994420069A74C /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,8 @@
 		5C7F83511B02E7330087849F = {
 			isa = PBXGroup;
 			children = (
+				5CF03F421B0994420069A74C /* Fabric.framework */,
+				5CF03F431B0994420069A74C /* Crashlytics.framework */,
 				5C7F835C1B02E7330087849F /* TestGenieDemo */,
 				5C7F83761B02E7330087849F /* TestGenieDemoTests */,
 				5C7F835B1B02E7330087849F /* Products */,
@@ -81,6 +94,8 @@
 		5C7F835C1B02E7330087849F /* TestGenieDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5C7F83831B02E8BF0087849F /* UIView+Genie.h */,
+				5C7F83841B02E8BF0087849F /* UIView+Genie.m */,
 				5C7F83611B02E7330087849F /* AppDelegate.h */,
 				5C7F83621B02E7330087849F /* AppDelegate.m */,
 				5C7F83641B02E7330087849F /* ViewController.h */,
@@ -89,6 +104,8 @@
 				5C7F836A1B02E7330087849F /* Images.xcassets */,
 				5C7F836C1B02E7330087849F /* LaunchScreen.xib */,
 				5C7F835D1B02E7330087849F /* Supporting Files */,
+				5C7F83981B036A4D0087849F /* aaaaViewController.h */,
+				5C7F83991B036A4D0087849F /* aaaaViewController.m */,
 			);
 			path = TestGenieDemo;
 			sourceTree = "<group>";
@@ -129,6 +146,7 @@
 				5C7F83561B02E7330087849F /* Sources */,
 				5C7F83571B02E7330087849F /* Frameworks */,
 				5C7F83581B02E7330087849F /* Resources */,
+				5CF03F411B09919B0069A74C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,12 +232,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CF03F411B09919B0069A74C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 5b701b78df61ab4757b77d9832dc89ead8366f82 7d21ce55a1890ee9d3a0de595fc62b274e8a78869b2ed939551969daafe31a2b";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C7F83561B02E7330087849F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5C7F83661B02E7330087849F /* ViewController.m in Sources */,
+				5C7F83851B02E8BF0087849F /* UIView+Genie.m in Sources */,
 				5C7F83631B02E7330087849F /* AppDelegate.m in Sources */,
 				5C7F83601B02E7330087849F /* main.m in Sources */,
 			);
@@ -349,6 +384,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestGenieDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +398,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestGenieDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +461,7 @@
 				5C7F837F1B02E7330087849F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C7F83801B02E7330087849F /* Build configuration list for PBXNativeTarget "TestGenieDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +470,7 @@
 				5C7F83821B02E7330087849F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

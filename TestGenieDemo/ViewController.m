@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+Genie.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)actionTouch:(id)sender {
+    CGFloat centerY = CGRectGetMidY(_destinationLabel.frame);
+    CGFloat centerX = CGRectGetMidX(_destinationLabel.frame);
+    CGRect endRect = CGRectMake(centerX - 5, centerY - 5, 10, 10);
+    [_imageV genieInTransitionWithDuration:2.0f destinationRect:endRect destinationEdge:BCRectEdgeBottom completion:^{
+        NSLog(@"动画完成!");
+        [_imageV removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
