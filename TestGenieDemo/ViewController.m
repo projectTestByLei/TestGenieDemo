@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    /*
+     
+     提交测试
+     
+    */
 }
 
 - (IBAction)actionTouch:(id)sender {
